@@ -4,8 +4,6 @@ class Song
   @@count = 0
   @@genres = []
   @@artists = []
-  @@genre_count = {}
-  @@artist_count = {}
   
   def initialize(name, artist, genre)
     @name = name
@@ -29,7 +27,10 @@ class Song
   end 
   
   def self.genre_count
-    @@genres.map { |genre| histogram.keys.include?(genre) ? histogram[genre] += 1 : histogram[genre] = 1 }
+    genre_count = {}
+    @@genres.map do |genre| 
+      histogram.keys.include?(genre) ? histogram[genre] += 1 : histogram[genre] = 1 }
+    end 
   end 
   
   def self.artist_count
