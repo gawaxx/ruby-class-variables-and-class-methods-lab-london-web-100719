@@ -29,7 +29,7 @@ class Song
   def self.genre_count
     genre_count = {}
     @@genres.map do |genre| 
-      histogram.keys.include?(genre) ? histogram[genre] += 1 : histogram[genre] = 1 }
+      genre_count.keys.include?(genre)? genre_count[genre] += 1 : genre_count[genre] = 1 
     end 
   end 
   
