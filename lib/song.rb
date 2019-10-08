@@ -29,7 +29,7 @@ class Song
   def self.genre_count
     genre_count = {}
     @@genres.map do |genre| 
-      genre_count.keys.include?(genre)? genre_count[genre] += 1 : genre_count[genre] = 1 
+      genre_count.keys.include?(genre)? genre_count[genre] += 1 : genre_count[genre] = 1 #update the count value 
     end 
     genre_count
   end 
@@ -37,7 +37,7 @@ class Song
   def self.artist_count
     artist_count = {}
     @@artists.map do |artist|
-      artist_count.keys.include?(artist)? artist_count[artist] += 1 : artist_count[artist] = 1
+      artist_count.keys.include?(artist)? artist_count[artist] += 1 || artist_count[artist] = 1
     end
     artist_count
   end 
