@@ -30,6 +30,7 @@ class Song
     genre_count = {}
     @@genres.map do |genre| 
       genre_count.keys.include?(genre)? genre_count[genre] += 1 : genre_count[genre] = 1 
+    genre_count
     end 
   end 
   
